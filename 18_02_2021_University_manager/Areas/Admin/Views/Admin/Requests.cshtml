@@ -1,0 +1,29 @@
+﻿@model IEnumerable<_18_02_2021_University_manager.Models.RequestViewModel>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @Html.ActionLink("Accept", "Accept", new { id=item.Id }) |
+            @Html.ActionLink("Reject", "Reject", new { id=item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>

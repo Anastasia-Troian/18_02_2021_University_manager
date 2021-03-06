@@ -22,19 +22,31 @@ namespace _18_02_2021_University_manager.Areas.User.Controllers
                 Id = m.Id,
                 Name = m.Name
             });
+
+            var user = ctx.Users.Find(User.Identity.GetUserId());
+
+            RequestViewModel r = ctx.Requests.Select(x => new RequestViewModel()
+            {
+                StudentId = x.StudentId,
+                GroupName = x.GroupName,
+                Requests = x.Requests
+            }).FirstOrDefault(a => a.StudentId == user.Student.Id);
+            if (r != null)
+                ViewBag.Req = r.Requests.ToString();
+
             return View(models);
         }
 
         public ActionResult SentRequest(string name)
         {
             var user = ctx.Users.Find(User.Identity.GetUserId());
-                ctx.Requests.Add(new Request
-                {
-                    GroupName = name,
-                    StudentId = user.Student.Id,
-                    Requests = Req.Requested
-                });
-                ctx.SaveChanges();
+            ctx.Requests.Add(new Request
+            {
+                GroupName = name,
+                StudentId = user.Student.Id,
+                Requests = Req.Requested
+            });
+            ctx.SaveChanges();
             return RedirectToAction("Index", "User");
 
 

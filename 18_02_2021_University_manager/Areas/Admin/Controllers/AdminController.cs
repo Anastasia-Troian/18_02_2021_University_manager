@@ -46,6 +46,7 @@ namespace _18_02_2021_University_manager.Areas.Admin.Controllers
             user.Group = ctx.Groups.FirstOrDefault(x => x.Name == p.GroupName);
             userManager.RemoveFromRole(user.ApplicationUser.Id, "User");
             userManager.AddToRole(user.ApplicationUser.Id , "Student");
+            ctx.Requests.Remove(p);
             ctx.SaveChanges();
 
             return RedirectToAction("Requests");
@@ -54,7 +55,7 @@ namespace _18_02_2021_University_manager.Areas.Admin.Controllers
         public ActionResult Reject(int id)
         {
             Request p = ctx.Requests.Find(id);
-            p.Requests = Models.Entity.Models.Req.Rejected;
+            p.Requests = Req.Rejected;
             ctx.SaveChanges();
 
             return RedirectToAction("Requests");

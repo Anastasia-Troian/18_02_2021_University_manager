@@ -7,6 +7,11 @@ namespace _18_02_2021_University_manager.Models
 {
     public class IndexViewModel
     {
+        public int StudentId { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string Email { get; set; }
+        public string Image { get; set; }
         public bool HasPassword { get; set; }
         public IList<UserLoginInfo> Logins { get; set; }
         public string PhoneNumber { get; set; }

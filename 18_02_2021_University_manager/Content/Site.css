@@ -1,13 +1,12 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
-    background-color: darkgray;
+    background-color: rgb(27, 27, 27);
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
 .container {
     margin: 0;
-    margin-left:8%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,10 +23,18 @@ textarea {
     max-width: 280px;
 }
 
-img {
+.d img {
     text-align: center;
     opacity: 0.5;
     position: relative;
+}
+
+.w{
+    width:100%;
+}
+
+.a{
+    font-size:50px;
 }
 
 .d{
@@ -38,15 +45,288 @@ h1 {
     color:lightgray;
     font-size:100px;
     position: absolute;
-    top: 200px;
+    top: 210px;
     left: 0;
     width: 100%;
 }
 
 h2 {
     color: lightgray;
-    position: absolute;
-    top: 200px;
     left: 0;
     width: 100%;
+}
+
+
+nav {
+    height: 4%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-left {
+    float: left;
+}
+
+.btn-right {
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+a, button {
+    font-size: x-large;
+    background-color: transparent;
+    color: lightgrey;
+    border: none;
+}
+
+    button:hover {
+        color: white;
+    }
+
+header {
+    height: 99%;
+    background-image: url("../Images/header.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+    header div {
+        position: relative;
+        text-align: center;
+        padding: 16% 0;
+        width: 100%;
+    }
+
+        header div p {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 50px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        header div button {
+            color: white;
+            background-color: #4895ff;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            padding: 1%;
+            width: 10%;
+        }
+
+        header div h1 {
+            margin-left: 20%;
+            margin-right: 20%;
+            text-transform: uppercase;
+            margin-top: 0;
+            font-size: 50px;
+        }
+
+.orange {
+    height: 3px;
+    width: 5%;
+    border: none;
+    background-color: #4895ff;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.height {
+    height: 50%;
+    background-color: #4895ff;
+}
+
+.my-div {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    padding: 5% 0;
+}
+
+.text {
+    padding: 0 15%;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.light {
+    height: 3px;
+    width: 5%;
+    border: none;
+    background-color: white;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.btn-white {
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 1%;
+    width: 10%;
+}
+
+.nav-white {
+    background-color: white;
+    color: black;
+    position: relative;
+    text-align: center;
+    height: 850px;
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.div-float {
+    text-align: center;
+    float: left;
+    height: 20%;
+    width: 25%;
+}
+
+.md{
+    height:80%;
+    padding-bottom:4%
+}
+
+.text-2 {
+    padding: 0 15%;
+    text-transform: none;
+    font-size: 22px;
+}
+
+.small-img {
+    height: 20%;
+    width: 20%;
+    margin-bottom:5%;
+}
+
+.img {
+    width: 100%;
+}
+
+.div-float-2 {
+    text-align: center;
+    float: left;
+    width: 33.33%;
+}
+
+.nav-no {
+
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    margin-bottom: 5%;
+}
+
+.c{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.navbar-right{
+    justify-content:right;
+}
+
+.txt {
+    padding-top: 5%;
+}
+
+.txt-1{
+    color:white;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+.table {
+    margin-top:5%;
+    color: white;
+    background-color: #4895ff;
+    width:80%;
+    margin-left:10%;
+    border-radius:20px;
+}
+
+.u a{
+    margin-left:20%
+}
+
+input{
+    color: white;
+}
+
+.btn{
+    color:white;
+}
+
+.portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33,37,41,.2);
+    position: absolute;
+    z-index: 1
+}
+
+    .portfolio-item .caption .caption-content {
+        color: white;
+        margin: auto 2rem 2rem
+    }
+
+        .portfolio-item .caption .caption-content h2 {
+            font-size: x-large;
+            text-transform: uppercase
+        }
+
+        .portfolio-item .caption .caption-content p {
+            font-weight: 300;
+            font-size: large;
+        }
+
+@media (min-width:992px) {
+    .portfolio-item {
+        max-width: none;
+        margin: 0
+    }
+
+        .portfolio-item .caption {
+            transition: background-color .7s;
+            transition: clip-path .25s ease-out,background-color .7s;
+            transition: clip-path .25s ease-out,background-color .7s;
+            clip-path: inset(0)
+        }
+
+            .portfolio-item .caption .caption-content {
+                transition: opacity .25s;
+                margin-left: 5rem;
+                margin-right: 5rem;
+                margin-bottom: 5rem
+            }
+
+        .portfolio-item img {
+            transition: clip-path .25s ease-out;
+            transition: clip-path .25s ease-out;
+            clip-path: inset(-1px)
+        }
+
+        .portfolio-item:hover img {
+            clip-path: inset(2rem);
+            border-radius: 20px;
+        }
+
+        .portfolio-item:hover .caption {
+            background-color: #4895ff;
+            clip-path: inset(2rem);
+            border-radius: 20px;
+            
+        }
 }

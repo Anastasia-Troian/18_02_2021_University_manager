@@ -54,15 +54,15 @@ namespace _18_02_2021_University_manager
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "833758444021729",
+               appSecret: "db090f8a5be1f5f9785c4c039fb1ff39");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "355632912144-u0mqpdfmaa8g8kaht4v3cn9ree9d872b.apps.googleusercontent.com",
+                ClientSecret = "t0Cd1QJ9Tm0Np00vPH5PyVe3"
+            });
         }
     }
 }
